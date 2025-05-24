@@ -31,7 +31,7 @@ To use the Indian Stocks MCP server with Claude Desktop, add the following confi
   "mcpServers": {
     "finance-data-server": {
       "command": "python3",
-      "args": ["/Users/aditya/Desktop/indian-stocks-mcp/server.py"],
+      "args": ["/path to/server.py"],
       "env": {
         "FINANCE_API_KEY": "<your_finance_api_key>",
         "FINANCE_API_BASE_URL": "https://stock.indianapi.in"
