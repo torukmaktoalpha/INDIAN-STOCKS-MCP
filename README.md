@@ -22,6 +22,29 @@ This project provides a Model Context Protocol (MCP) server for accessing Indian
 
 These can be set in your environment or are configured in your VS Code settings for MCP integration.
 
+## Using with Claude Desktop
+
+To use the Indian Stocks MCP server with Claude Desktop, add the following configuration to your Claude Desktop config file (usually located at `~/Library/Application Support/Claude/claude_desktop_config.json` on macOS):
+
+```json
+{
+  "mcpServers": {
+    "finance-data-server": {
+      "command": "python3",
+      "args": ["/Users/aditya/Desktop/indian-stocks-mcp/server.py"],
+      "env": {
+        "FINANCE_API_KEY": "<your_finance_api_key>",
+        "FINANCE_API_BASE_URL": "https://stock.indianapi.in"
+      }
+    }
+  }
+}
+```
+
+Replace `<your_finance_api_key>` with your actual API key.
+
+This will enable Claude Desktop to access Indian stock market data through the MCP server you are running locally.
+
 ## Integration
 This project is intended to be used with MCP-compatible clients, such as VS Code extensions or AI agents that support the Model Context Protocol.
 
